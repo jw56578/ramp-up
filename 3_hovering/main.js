@@ -8,17 +8,21 @@ var texasSharpTab = document.getElementById("texasSharpTab");
 tuQuoqueTab.onmouseover = function(){
 	tuQuoqueTab.style.background = 'lightgray';
 	//tuQuoqueDropdown.style.display = 'block';
-	$(tuQuoqueDropdown).slideDown('slow')
+	$(tuQuoqueDropdown).slideToggle('slow') // or slideDown()
+	texasSharpDropdown.style.display = 'none';
+	illicitMajorDropdown.style.display = 'none';
 }
 tuQuoqueTab.onmouseout = function(){
 	tuQuoqueTab.style.background = 'lightgray';
 	//tuQuoqueDropdown.style.display = 'none';
-	$(tuQuoqueDropdown).slideUp('slow')
+	$(tuQuoqueDropdown).slideToggle('slow') // or slideUp()
 }
 
 illicitMajorTab.onmouseover = function(){
 	illicitMajorTab.style.background = 'orange';
 	illicitMajorDropdown.style.display = 'inline-block';
+	tuQuoqueDropdown.style.display = 'none';
+	texasSharpDropdown.style.display = 'none';
 }
 illicitMajorTab.onmouseout = function(){
 	illicitMajorTab.style.background = 'lightgray';
@@ -29,6 +33,8 @@ texasSharpTab.onmouseover = function(){
 	texasSharpTab.style.background = 'skyblue';
 	texasSharpDropdown.style.display = 'inline-block';
 	texasSharpDropdown.style.float = 'right';
+	tuQuoqueDropdown.style.display = 'none';
+	illicitMajorDropdown.style.display = 'none';
 }
 texasSharpTab.onmouseout = function(){
 	texasSharpTab.style.background = 'lightgray';
