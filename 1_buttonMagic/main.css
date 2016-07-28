@@ -1,0 +1,14 @@
+#mainTitle{
+	background-color:gray;
+	color:white;
+	padding:1em;
+	width:4em;
+	position:center;
+}
+
+#natureImages{
+	width:320px;
+	height:240px;
+	margin-top:2em;
+	background-color:gray;
+}
