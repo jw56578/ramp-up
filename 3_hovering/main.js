@@ -26,7 +26,7 @@ illicitMajorTab.onmouseout = function(){
 texasSharpTab.onmouseover = function(){
 	texasSharpTab.style.background = 'skyblue';
 	texasSharpDropdown.style.display = 'inline-block';
-	texasSharpDropdown.style.display = 'none';
+	texasSharpDropdown.style.float = 'right';
 }
 texasSharpTab.onmouseout = function(){
 	texasSharpTab.style.background = 'gray';
