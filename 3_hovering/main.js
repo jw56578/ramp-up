@@ -25,3 +25,5 @@ texasSharpTab.onmouseover = function(){
 texasSharpTab.onmouseout = function(){
 	texasSharpTab.style.background = 'gray';
 }
+
+// upon clicking a tab we should see a info bubble dropdown
