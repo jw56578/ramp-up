@@ -6,12 +6,14 @@ var texasSharpTab = document.getElementById("texasSharpTab");
 
 // we use the onmouseover & onmouseout js functions on our html element, hover requires jQuery
 tuQuoqueTab.onmouseover = function(){
-	tuQuoqueTab.style.background = 'red';
-	tuQuoqueDropdown.style.display = 'block';
+	tuQuoqueTab.style.background = 'lightgray';
+	//tuQuoqueDropdown.style.display = 'block';
+	$(tuQuoqueDropdown).slideDown('slow')
 }
 tuQuoqueTab.onmouseout = function(){
 	tuQuoqueTab.style.background = 'lightgray';
-	tuQuoqueDropdown.style.display = 'none';
+	//tuQuoqueDropdown.style.display = 'none';
+	$(tuQuoqueDropdown).slideUp('slow')
 }
 
 illicitMajorTab.onmouseover = function(){
