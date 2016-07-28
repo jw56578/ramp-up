@@ -32,22 +32,28 @@ h1{
 }
 
 #tuQuoqueDropdown{
-	background-color:lightgray;
+	background-color:red;
 	height:15em;
 	width:33.33%;
-	display:inline-block;
+	display:none;
 }
 
 #illicitMajorDropdown{
-	background-color:lightgray;
+	background-color:orange;
 	height:15em;
 	width:33.33%;
-	display:inline-block;
+	display:none;
 }
 
 #texasSharpDropdown{
-	background-color:lightgray;
+	background-color:skyblue;
 	height:15em;
 	width:33.33%;
-	display:inline-block;
+	display:none;
+}
+
+#dropdownContainer{
+	width:100%;
+	display:block;
+	text-align:center;
 }
