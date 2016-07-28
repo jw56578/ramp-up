@@ -1,3 +1,33 @@
 h1{
 	color:skyblue;
 }
+
+#tabContainer{
+	width:100%;
+	background-color:red;
+	display:block;
+	text-align:center;
+}
+
+#tuQuoqueTab{
+	background-color:green;
+	width:33.33%;
+	display:inline-block;
+}
+
+#illicitMajorTab{
+	background-color:orange;
+	width:33.33%;
+	display:inline-block;
+}
+
+#texasSharpTab{
+	background-color:yellow;
+	width:33.33%;
+	display:inline-block;
+
+}
+
+.tab{
+	font-family: helvetica;
+}
