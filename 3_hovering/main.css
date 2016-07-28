@@ -10,19 +10,22 @@ h1{
 }
 
 #tuQuoqueTab{
-	background-color:gray;
+	background-color:lightgray;
+	height:3em;
 	width:33.33%;
 	display:inline-block;
 }
 
 #illicitMajorTab{
-	background-color:gray;
+	background-color:lightgray;
+	height:3em;
 	width:33.33%;
 	display:inline-block;
 }
 
 #texasSharpTab{
-	background-color:gray;
+	background-color:lightgray;
+	height:3em;
 	width:33.33%;
 	display:inline-block;
 }

@@ -10,7 +10,7 @@ tuQuoqueTab.onmouseover = function(){
 	tuQuoqueDropdown.style.display = 'block';
 }
 tuQuoqueTab.onmouseout = function(){
-	tuQuoqueTab.style.background = 'gray';
+	tuQuoqueTab.style.background = 'lightgray';
 	tuQuoqueDropdown.style.display = 'none';
 }
 
@@ -19,7 +19,7 @@ illicitMajorTab.onmouseover = function(){
 	illicitMajorDropdown.style.display = 'inline-block';
 }
 illicitMajorTab.onmouseout = function(){
-	illicitMajorTab.style.background = 'gray';
+	illicitMajorTab.style.background = 'lightgray';
 	illicitMajorDropdown.style.display = 'none';
 }
 
@@ -29,7 +29,7 @@ texasSharpTab.onmouseover = function(){
 	texasSharpDropdown.style.float = 'right';
 }
 texasSharpTab.onmouseout = function(){
-	texasSharpTab.style.background = 'gray';
+	texasSharpTab.style.background = 'lightgray';
 	texasSharpDropdown.style.display = 'none'
 }
 
