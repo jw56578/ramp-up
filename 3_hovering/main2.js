@@ -1,9 +1,11 @@
-/*$("#tab1").hover( 
+$("#tab1").hover( 
 	function(){
-		//$(tab1).css({"background-color":"lightgray"});
-		$("#drop1").slideToggle('slow') // or slideDown()
-  	}
-);*/
+		$("#drop1").css({"visibility":"visible"})
+	},
+	function(){
+		$("#drop1").css({"visibility":"hidden"})
+	}
+);
 
 $("#tab2").hover( 
 	function(){
@@ -13,10 +15,12 @@ $("#tab2").hover(
 		$("#drop2").css({"visibility":"hidden"})
 	}
 );
-/*
+
 $("#tab3").hover( 
 	function(){
-		//$(tab1).css({"background-color":"lightgray"});
-		$("#drop3").slideToggle('slow') // or slideDown()
-  	}
-); */
+		$("#drop3").css({"visibility":"visible"})
+	},
+	function(){
+		$("#drop3").css({"visibility":"hidden"})
+	}
+);
