@@ -1,0 +1,34 @@
+.tab{
+	background-color:red;
+	float:left;
+	width:32.9%;
+	text-align:center;
+}
+
+#tab{
+	width:100%;
+	position:fixed;
+	margin:auto;
+	left:0;
+	top:0;
+}
+
+.container{
+	width:32.9%;
+	display:inline-block;
+}
+
+.dropdowns{
+	height:9em;
+	background-color: skyblue;
+	padding:10px;
+	display:none;
+	width:32.9%;
+}
+
+.content{
+	position:fixed;
+	z-index:100;
+	padding-left:9em;
+	display:inline-block;
+}
