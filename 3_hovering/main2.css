@@ -1,16 +1,13 @@
+body{
+	margin:0;
+}
 .tab{
 	background-color:red;
-	float:left;
-	width:32.9%;
+	float:left; 
+	width:33.33%;
+	height:2em;
+	padding-top:2%;
 	text-align:center;
-}
-
-#tab{
-	width:100%;
-	position:fixed;
-	margin:auto;
-	left:0;
-	top:0;
 }
 
 .container{
@@ -18,15 +15,18 @@
 }
 
 .dropdowns{
-	width:32.55%;
-	background-color: skyblue;
-	display:inline-block; /* Note: span tags have inline block set to auto */
+	background-color:skyblue;
+	float:left;
+	width:33.33%;
+	padding-top:1em;
+	padding-bottom:1em;
 	vertical-align: top;
-	display:none;
+	visibility:hidden; /* Note: span tags have inline block set to auto */
 }
 
 #dropContainer{
-	width:100%;
-	overflow:hidden;
 	background-color: yellow;
 }
+
+
+
