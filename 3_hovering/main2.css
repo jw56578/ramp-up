@@ -22,6 +22,7 @@
 	background-color: skyblue;
 	display:inline-block; /* Note: span tags have inline block set to auto */
 	vertical-align: top;
+	display:none;
 }
 
 #dropContainer{

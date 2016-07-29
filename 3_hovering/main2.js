@@ -5,9 +5,3 @@ $(tab1).hover(
   	}
 );
 
-/*$(tab2).hover( 
-	function(){
-		//$(tab1).css({"background-color":"lightgray"});
-		$(drop2).slideToggle('slow') // or slideDown()
-  	}
-);
