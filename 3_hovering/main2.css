@@ -21,7 +21,7 @@ body{
 	padding-top:1em;
 	padding-bottom:1em;
 	vertical-align: top;
-	visibility:hidden; /* Note: span tags have inline block set to auto */
+	visibility:hidden; /* Where display:hidden makes elements both disappear and take up no space, visibility makes the same elements disappear but still take up space. */
 }
 
 #dropContainer{

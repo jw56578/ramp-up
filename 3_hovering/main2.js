@@ -1,3 +1,4 @@
+// Note; hover takes two arguments
 $("#tab1").hover( 
 	function(){
 		$("#drop1").css({"visibility":"visible"})
