@@ -15,26 +15,17 @@
 
 .container{
 	width:32.9%;
-	/* display:inline-block; */
 }
 
 .dropdowns{
 	width:32.55%;
-	/* position:fixed; */
 	background-color: skyblue;
-	display:inline-block; /* spans have inline block auto */
-	/*display:none;*/
+	display:inline-block; /* Note: span tags have inline block set to auto */
+	vertical-align: top;
 }
 
 #dropContainer{
 	width:100%;
 	overflow:hidden;
 	background-color: yellow;
-}
-
-/*.content{
-	position:fixed;
-	z-index:100;
-	padding-left:9em;
-	display:inline-block;
 }
