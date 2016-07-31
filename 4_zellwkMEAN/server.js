@@ -21,5 +21,9 @@ app.post('/quotes', function(req, res){
 })
 
 MongoClient.connect('mongodb://<dbuser>:<dbpassword>@ds015942.mlab.com:15942/mean-beginner', (err, database) => {
-	// ...start the server
+	if (err) return console.log(err)
+	db = database
+	app.listen(3000, () => {
+		console.log('listening on 3000')
+	})
 })
