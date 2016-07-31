@@ -16,9 +16,14 @@ app.get('/', function(req, res){
 // Note: request and response are usually written as req and res.
 
 app.post('/quotes', function(req, res){
-	//console.log('Hellooooooooooooo!') 
-	console.log(req.body)
-})
+	db.collection('quotes'.save(req.body, (err, result){
+		if(err) return console.log(err)
+
+		console.log('saved to database')
+		res.redirect('/')
+	})
+}))
+
 
 MongoClient.connect('mongodb://<dbuser>:<dbpassword>@ds015942.mlab.com:15942/mean-beginner', (err, database) => {
 	if (err) return console.log(err)
