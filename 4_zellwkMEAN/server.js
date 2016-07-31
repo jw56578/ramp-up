@@ -20,6 +20,6 @@ app.post('/quotes', function(req, res){
 	console.log(req.body)
 })
 
-MongoClient.connect('link-to-mongodb', (err, database) => {
+MongoClient.connect('mongodb://<dbuser>:<dbpassword>@ds015942.mlab.com:15942/mean-beginner', (err, database) => {
 	// ...start the server
 })
