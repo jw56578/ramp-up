@@ -11,10 +11,10 @@ update.addEventListener('click', function () {
       'quote': 'I find your lack of faith disturbing.'
     })
   })
-  .then(response => {
+  .then(function(response) {
     if (response.ok) return response.json()
   })
-  .then(data => {
+  .then(function(data){
     console.log(data)
   })
 })
