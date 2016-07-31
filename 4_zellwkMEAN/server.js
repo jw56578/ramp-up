@@ -25,7 +25,7 @@ app.post('/quotes', function(req, res){
 })
 
 
-MongoClient.connect('mongodb://<dbuser>:<dbpassword>@ds015942.mlab.com:15942/mean-beginner', function (err, database) {
+MongoClient.connect('mongodb://alibaba:0pensesamee@ds015942.mlab.com:15942/mean-beginner', function (err, database) {
 	if (err) return console.log(err)
 	db = database
 	app.listen(3000, function() {
