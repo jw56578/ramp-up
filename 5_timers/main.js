@@ -5,7 +5,7 @@ var numbered = 0
 var stringNum = parseInt(numbered)
 var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monsters in an array and access them using these 2 variables (pokemon & numbered) instead.
 
-// 2nd step: display starting slide(s)
+// 2nd step: display starting slide(s), ask player for name to keep track of score.
 
 // 3rd step: create begin game functionality
 
@@ -17,4 +17,8 @@ var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monste
 
 // 7th step: have correct pokemon name show up as one of 4 random option each time the image shows
 
-// 8th step: 
+// 8th step: Show checkmark or wrong mark when answer is correct/incorrect in split second.
+
+// 9th step: Leaf through each question, maximum of 10 questions.
+
+// 10th step: calculate the score (add players name to a leaderboard?)
