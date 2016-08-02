@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Timers Pokemon!</title>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
 	<body>
-		<h1>setTimeout</h1>
-		<button>ClickMe</button>
+		<h1>Gotta name em all!</h1>
+		<div id="content">
+			<div id="gameContainer">
+				<img id="pokedexContainer"></img>
+				<div id="instruction">Name this pokemon!</div><div>Time remaining: <div id="countdown"></div></div>
+				<img id="pokemonImage" src="Images/aplaceholder.png"></img>
+				<br/>
+				<div id="lineA">a.)</div><div id="optionA" class="option">a</div>
+				<div id="lineB">b.)</div><div id="optionB" class="option">b</div>
+				<div id="lineC">c.)</div><div id="optionC" class="option">c</div>
+				<div id="lineD">d.)</div><div id="optionD" class="option">d</div>
+			</div>
+		</div>
+		<div id="buttonArea">
+			<button id="beginBtn">Begin!</button>
+			<button id="quitBtn">Quit</button>
+		</div>
 		<script src="main.js" type="text/javascript"></script>
 	</body>
 </html>
