@@ -20,6 +20,19 @@ $('#nextBtn').click(function(){
 
 // 4th step: create timer feature
 
+var interval = setInterval( decrement, 1000);
+var countdown = $('#countdown');
+var timerNum = 30;
+
+function decrement(){
+    timerNum = timerNum % 360 - 1;
+}
+
+$('#quitBtn').click(function(){
+    countdown.text(timerNum);
+})
+
+
 // 5th step: create timed page refreshes
 
 // 6th step: upload random pictures to screen
