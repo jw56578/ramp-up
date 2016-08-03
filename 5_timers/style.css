@@ -13,3 +13,7 @@ h1{
 #gameSlide{
 	background-color:lightgreen;
 }
+
+#gameoverSlide{
+	background-color: red;
+}
