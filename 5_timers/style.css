@@ -1,3 +1,15 @@
 h1{
 	color:skyblue;
 }
+
+#slide1{
+	background-color:lightgrey;
+}
+
+#slide2{
+	background-color:indianred;
+}
+
+#gameSlide{
+	background-color:lightgreen;
+}

@@ -7,6 +7,7 @@ var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monste
 
 // 2nd step: display starting slide(s), ask player for name to keep track of score.
 
+
 // 3rd step: create begin game functionality
 
 // 4th step: create timer feature
