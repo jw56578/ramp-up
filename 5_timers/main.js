@@ -1,12 +1,20 @@
 // Goal of this project: write a pokemon game while learning how to use timer functions!!!
 
 // 1st step: figure out how all pokemon will be stored.
-var numbered = 0
-var stringNum = parseInt(numbered)
+var numbered = 0;
+var stringNum = parseInt(numbered);
 var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monsters in an array and access them using these 2 variables (pokemon & numbered) instead.
 
 // 2nd step: display starting slide(s), ask player for name to keep track of score.
+$('#enterBtn').click(function(){
+	$('#gameSlide').show();
+	$('#slide1').hide();
+})
 
+$('#nextBtn').click(function(){
+	$('#gameoverSlide').show();
+	$('#gameSlide').hide();
+})
 
 // 3rd step: create begin game functionality
 
