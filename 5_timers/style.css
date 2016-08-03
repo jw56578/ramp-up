@@ -3,7 +3,12 @@ h1{
 }
 
 #slide1{
-	background-color:lightgrey;
+	color:white;
+}
+
+#logo{
+	height:10%;
+	width:30%;
 }
 
 #slide2{
@@ -16,4 +21,13 @@ h1{
 
 #gameoverSlide{
 	background-color: red;
+}
+
+#slide2, #gameSlide, #gameoverSlide{
+	display:none;
+}
+
+#gameContainer{
+	margin:2em 4em 4em 4em;
+	font-size:1.5em;
 }
