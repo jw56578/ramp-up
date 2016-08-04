@@ -19,18 +19,17 @@ $('#nextBtn').click(function(){
 // 3rd step: create begin game functionality
 
 // 4th step: create timer feature
-
-var interval = setInterval( decrement, 1000);
-var countdown = $('#countdown');
-var timerNum = 30;
-
-function decrement(){
-    timerNum = timerNum % 360 - 1;
+time = 30;
+function timer(){
+  if(!time<1){
+   time = time - 1
+   result.innerHTML = ""+time+""
+ }else{
+   window.clearInterval(update);
+   result.innerHTML = "<h1>Countdown done</h1>"
+ }
 }
-
-$('#quitBtn').click(function(){
-    countdown.text(timerNum);
-})
+  update = setInterval("timer()",1000);
 
 
 // 5th step: create timed page refreshes
