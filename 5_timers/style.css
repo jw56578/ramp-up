@@ -32,3 +32,8 @@ h1{
 	color:red;
 	font-size:1em;
 }
+
+#pokemonImage{
+	height:8em;
+	width:8em;
+}
