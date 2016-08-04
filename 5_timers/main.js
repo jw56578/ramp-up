@@ -19,7 +19,7 @@ $('#nextBtn').click(function(){
 // 3rd step: create begin game functionality
 
 // 4th step: create timer feature
-time = 30;
+time = 10;
 function timer(){
   if(!time<1){
    time = time - 1
@@ -35,6 +35,14 @@ function timer(){
 // 5th step: create timed page refreshes
 
 // 6th step: upload random pictures to screen
+function randomPokemon(){
+	//var chosenPokemon = "Pkmn"+randomNum;
+	var randomNum = Math.floor(Math.random() * 152 + 0);
+	if(randomNum != 5){
+		$('#pokemonImage').attr("src", "Images/Pkmn"+randomNum+".png")
+	}
+}
+randomPokemon()
 
 // 7th step: have correct pokemon name show up as one of 4 random option each time the image shows
 
