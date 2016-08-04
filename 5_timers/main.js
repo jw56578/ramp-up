@@ -6,35 +6,30 @@ var stringNum = parseInt(numbered);
 var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monsters in an array and access them using these 2 variables (pokemon & numbered) instead.
 
 // 2nd step: display starting slide(s), ask player for name to keep track of score.
-$('#enterBtn').click(function(){
-	$('#gameSlide').show();
-	$('#slide1').hide();
-})
 
 $('#nextBtn').click(function(){
 	$('#gameoverSlide').show();
 	$('#gameSlide').hide();
 })
 
-// 3rd step: create begin game functionality
-
-// 4th step: create timer feature
-time = 10;
+// Below we create a timer feature!
+time = 5;
 function timer(){
   if(!time<1){
    time = time - 1
    result.innerHTML = ""+time+""
  }else{
    window.clearInterval(update);
-   result.innerHTML = "<h1>Countdown done</h1>"
+   window.location.reload()
  }
 }
-  update = setInterval("timer()",1000);
+
+// Below we check the url to see if it's on the proper page, if so we run code that triggers our timer function every so often
+if(window.location.href.indexOf("gameSlide") > -1){
+	update = setInterval("timer()",1000);
+}
 
 
-// 5th step: create timed page refreshes
-
-// 6th step: upload random pictures to screen
 function randomPokemon(){
 	//var chosenPokemon = "Pkmn"+randomNum;
 	var randomNum = Math.floor(Math.random() * 152 + 0);
@@ -44,10 +39,10 @@ function randomPokemon(){
 }
 randomPokemon()
 
-// 7th step: have correct pokemon name show up as one of 4 random option each time the image shows
+// TODO: have correct pokemon name show up as one of 4 random option each time the image shows
 
-// 8th step: Show checkmark or wrong mark when answer is correct/incorrect in split second.
+// TODO: Show checkmark or wrong mark when answer is correct/incorrect in split second.
 
-// 9th step: Leaf through each question, maximum of 10 questions.
+// TODO: Leaf through each question, maximum of 10 questions.
 
-// 10th step: calculate the score (add players name to a leaderboard?)
+// TODO: calculate the score (add players name to a leaderboard?)

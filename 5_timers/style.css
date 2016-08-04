@@ -23,7 +23,7 @@ h1{
 	background-color: red;
 }
 
-#slide2, #gameSlide, #gameoverSlide{
+#slide2, #gameoverSlide{
 	display:none;
 }
 
