@@ -7,11 +7,6 @@ var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monste
 
 // 2nd step: display starting slide(s), ask player for name to keep track of score.
 
-$('#nextBtn').click(function(){
-	$('#gameoverSlide').show();
-	$('#gameSlide').hide();
-})
-
 // Below we create a timer feature!
 time = 5;
 function timer(){
@@ -46,3 +41,5 @@ randomPokemon()
 // TODO: Leaf through each question, maximum of 10 questions.
 
 // TODO: calculate the score (add players name to a leaderboard?)
+
+// TODO: write code so that if browser navigates to the gameSlide page by mistake (no game is initiated) the browser returns an error page.

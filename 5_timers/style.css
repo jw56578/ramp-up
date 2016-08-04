@@ -23,10 +23,6 @@ h1{
 	background-color: red;
 }
 
-#slide2, #gameoverSlide{
-	display:none;
-}
-
 #gameContainer{
 	margin:2em 4em 4em 4em;
 	font-size:1.5em;
