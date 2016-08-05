@@ -8,7 +8,7 @@ var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monste
 // 2nd step: display starting slide(s), ask player for name to keep track of score.
 
 // Below we create a timer feature!
-time = 5;
+time = 50;
 function timer(){
   if(!time<1){
    time = time - 1
@@ -24,12 +24,22 @@ if(window.location.href.indexOf("gameSlide") > -1){
 	update = setInterval("timer()",1000);
 }
 
-
 function randomPokemon(){
-	//var chosenPokemon = "Pkmn"+randomNum;
 	var randomNum = Math.floor(Math.random() * 152 + 0);
-	if(randomNum != 5){
+	if(randomNum < 152){
 		$('#pokemonImage').attr("src", "Images/Pkmn"+randomNum+".png")
+	}
+	// Below we store a random # between 0 and 4 in a variable (this will help in placing the correct name of the pokemon pictured in a random slot)
+	var randomNumBetween0And4 = Math.floor(Math.random() * 3 + 1);
+
+	if(randomNumBetween0And4 = 0){
+		optionA.innerHTML = "+pokemonNames[numz]+";
+	} else if(randomNumBetween0And4 = 1){
+		optionB.innerHTML = "+pokemonNames[numz]+";
+	} else if(randomNumBetween0And4 = 2){
+		optionC.innerHTML = "+pokemonNames[numz]+";
+	} else if(randomNumBetween0And4 = 3){
+		optionD.innerHTML = "+pokemonNames[numz]+";
 	}
 }
 randomPokemon()
@@ -37,7 +47,7 @@ randomPokemon()
 // TODO: have correct pokemon name show up as one of 4 random option each time the image shows
 
 var pokemonNames = 
-["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Beedrill","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate","Spearow","Fearow","Ekans","Arbok","Pikachu","Raichu","Sandshrew","Sandslash","Nidoran","Nidorina","Nidoqueen","Nidoran","Nidorino","Nidoking","Clefairy","Clefable","Vulpix","Ninetales","Jigglypuff","Wigglypuff","Zubat","Golbat","Oddish","Gloom","Vileplume","Paras","Parasect","Venonat","Venomoth","Diglett","Dugtrio","Meowth","Persian","Psyduck","Golduck","Mankey","Primeape","Growlithe","Arcanine","Poliwag","Poliwhirl","Poliwrath","Abra","Kadabra","Alakazam","Machop","Machoke","Machamp","Bellsprout","Weepinbell","Victreebel","Tentacool","Tentacruel","Geodude","Graveler","Golem","Ponyta","Rapidash","Slowpoke","Slowbro","Magnemite","Magneton","Farfetch'd","Doduo","Dodrio","Seel","Dewgong","Grimer","Muk","Shellder","Cloyster","Gastly","Haunter","Gengar","Onix","Drowzee","Hyno","Krabby","Kingler","Voltorb","ELectrode","Exeggcute","Exeggutor","Cubone","Marowak","Hitmonlee","Hitmonchan","Lickitung","Koffing","Weezing","Rhyhorn","Rhydon","Chansey","Tangela","Kangaskhan","Horsea","Seadra","Goldeen","Seaking","Staryu","Starmie","Mr. Mime","Scyther","Jynx","Electabuzz","Magmar","Pinsir","Tauros","Magikarp","Gyrados","Lapras","Ditto","Eevee","Vaporeon","Jolteon","FLareon","Porygon","Omanyte","Omastar","Kabuto","Kabutops","Aerodactyl","Snorlax","Articuno","Zapdos","Moltres","Dratini","Dragonair","Dragonite","Mewtwo", "Mew"]
+["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Beedrill","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate","Spearow","Fearow","Ekans","Arbok","Pikachu","Raichu","Sandshrew","Sandslash","Nidoran","Nidorina","Nidoqueen","Nidoran","Nidorino","Nidoking","Clefairy","Clefable","Vulpix","Ninetales","Jigglypuff","Wigglypuff","Zubat","Golbat","Oddish","Gloom","Vileplume","Paras","Parasect","Venonat","Venomoth","Diglett","Dugtrio","Meowth","Persian","Psyduck","Golduck","Mankey","Primeape","Growlithe","Arcanine","Poliwag","Poliwhirl","Poliwrath","Abra","Kadabra","Alakazam","Machop","Machoke","Machamp","Bellsprout","Weepinbell","Victreebel","Tentacool","Tentacruel","Geodude","Graveler","Golem","Ponyta","Rapidash","Slowpoke","Slowbro","Magnemite","Magneton","Farfetch'd","Doduo","Dodrio","Seel","Dewgong","Grimer","Muk","Shellder","Cloyster","Gastly","Haunter","Gengar","Onix","Drowzee","Hyno","Krabby","Kingler","Voltorb","ELectrode","Exeggcute","Exeggutor","Cubone","Marowak","Hitmonlee","Hitmonchan","Lickitung","Koffing","Weezing","Rhyhorn","Rhydon","Chansey","Tangela","Kangaskhan","Horsea","Seadra","Goldeen","Seaking","Staryu","Starmie","Mr. Mime","Scyther","Jynx","Electabuzz","Magmar","Pinsir","Tauros","Magikarp","Gyrados","Lapras","Ditto","Eevee","Vaporeon","Jolteon","FLareon","Porygon","Omanyte","Omastar","Kabuto","Kabutops","Aerodactyl","Snorlax","Articuno","Zapdos","Moltres","Dratini","Dragonair","Dragonite","Mewtwo", "Mew"];
 
 // TODO: Show checkmark or wrong mark when answer is correct/incorrect in split second.
 
