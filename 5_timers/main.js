@@ -36,20 +36,75 @@ function randomPokemon(){
 	var randomNumBetween0And4 = Math.floor(Math.random() * 3 + 1);
 	var correctedForRandomNum = randomNum - 1
 	var randomize = pokemonNames[correctedForRandomNum]; 
+// TODO: Below we must add 3 random but incorrect quiz answers in every place the correct quiz answer is not.
+	// We accomplish this by getting a new random number different from our original randomNum variable. 
+	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
+
+var newRandomNum1;
+var newRandomNum2;
+var newRandomNum3;
+
+function assignNumbersToWrongAnswers(){
+	//var x = undefined, y = undefined, z = undefined;
+
+	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
 	
-	if(randomNumBetween0And4 == 1){ // Switching '=' to '==' makes my pokemon names appear in random order.
+	// My first if statement is working, the rest are NOT!??
+	if(randomWrongNum != randomNum){
+	  newRandomNum3 = randomWrongNum;
+	} 
+	console.log('hola!')
+
+	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
+	if(y = undefined && randomWrongNum != x && randomWrongNum != randomNum){
+	  newRandomNum2 = randomWrongNum;
+	} 
+	console.log('como')
+	
+	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
+	if(z = undefined && randomWrongNum != y && randomWrongNum != x && randomWrongNum != randomNum){
+	  newRandomNum1 = randomWrongNum;
+	} 
+	console.log('esta?')
+
+}
+
+console.log(newRandomNum3)
+
+assignNumbersToWrongAnswers();
+
+	var wrongAnswerChoice1 = pokemonNames[newRandomNum1];
+	var wrongAnswerChoice2 = pokemonNames[newRandomNum2];
+	var wrongAnswerChoice3 = pokemonNames[newRandomNum3];
+	
+	if(randomNumBetween0And4 == 0){ // Switching '=' to '==' makes my pokemon names appear in random order.
 		optionA.innerHTML = ""+randomize+"";
+		optionB.innerHTML = ""+wrongAnswerChoice1+"";
+		optionC.innerHTML = ""+wrongAnswerChoice2+"";
+		optionD.innerHTML = ""+wrongAnswerChoice3+"";
+	} else if(randomNumBetween0And4 == 1){
+		optionB.innerHTML = ""+randomize+"";
+		optionA.innerHTML = ""+wrongAnswerChoice1+"";
+		optionC.innerHTML = ""+wrongAnswerChoice2+"";
+		optionD.innerHTML = ""+wrongAnswerChoice3+"";
 	} else if(randomNumBetween0And4 == 2){
-		optionD.innerHTML = ""+randomize+"";
+		optionC.innerHTML = ""+randomize+"";
+		optionA.innerHTML = ""+wrongAnswerChoice1+"";
+		optionB.innerHTML = ""+wrongAnswerChoice2+"";
+		optionD.innerHTML = ""+wrongAnswerChoice3+"";
 	} else if(randomNumBetween0And4 == 3){
 		optionD.innerHTML = ""+randomize+"";
-	} else if(randomNumBetween0And4 == 4){
-		optionD.innerHTML = ""+randomize+"";
+		optionA.innerHTML = ""+wrongAnswerChoice1+"";
+		optionB.innerHTML = ""+wrongAnswerChoice2+"";
+		optionC.innerHTML = ""+wrongAnswerChoice3+"";
 	}
-}
-randomPokemon()
 
-// TODO: have correct pokemon name show up as one of 4 random option each time the image shows
+
+}
+randomPokemon();
+
+
+
 
 
 // TODO: Show checkmark or wrong mark when answer is correct/incorrect in split second.
