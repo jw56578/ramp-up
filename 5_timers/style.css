@@ -46,3 +46,7 @@ h1{
 	cursor:hand;
 	cursor:pointer;
 }
+#score{
+	height:10%;
+	width:15%;
+}

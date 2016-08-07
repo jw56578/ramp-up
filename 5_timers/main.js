@@ -112,10 +112,14 @@ $(".option").on("mouseout", function(){
 
 // step2: have each button fire a function that checks the guess and save results for later
 
+/* 
 console.log(optionA.innerHTML) // --> Note that just console logging a divs id gives you tons of info about it, including what its innerHTML reads as.
 console.log(pokemonImage.src)
-// Found the GEM below on http://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript 
+*/
+/*
+I found the GEM below on http://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript 
 console.log( (pokemonImage.src).split('Images/').pop());
+
 console.log( (pokemonImage.src).split('Images/Pkmn').pop());
 console.log( ((pokemonImage.src).split('Images/Pkmn').pop()).slice(0,-4));
 console.log(pokemonNames[1])
@@ -131,11 +135,35 @@ console.log(optionA.innerHTML)
 console.log('........')
 console.log(pokemonNames[parseFloat(pkmnString) -1])
 console.log(pokemonNames[parseFloat(pkmnString) -1] == optionA.innerHTML || pokemonNames[parseFloat(pkmnString) -1] == optionB.innerHTML || pokemonNames[parseFloat(pkmnString) -1] == optionC.innerHTML || pokemonNames[parseFloat(pkmnString) -1] == optionD.innerHTML)
-/*
-$(".option").on("click", function(){
-	if((this.pokemonImage.src).split('Images/').pop()) = pokemonNames[])
-})
 */
+pkmnString = (((pokemonImage.src).split('Images/Pkmn').pop()).slice(0,-4));
+
+var correctAnswerGiven;
+$(".option").on("click", function(){
+	if(pokemonNames[parseFloat(pkmnString) -1] == this.innerHTML){
+		correctAnswerGiven = true;
+		//console.log('CORRECT!')
+	} else{
+		correctAnswerGiven = false;
+		//console.log('INCORRECT!')
+	}
+
+	if(correctAnswerGiven){
+	  score.innerHTML = "<img src='Images/thatIsCorrect.png'></img>"
+	  setInterval(function(){
+	  	window.location.reload()
+	  },1000);
+
+	} else{
+	  score.innerHTML = "<img src='Images/thatIsIncorrect.png'></img>"
+	  setInterval(function(){
+	  	window.location.reload()
+	  },1000);
+    }
+})
+
+
+
 
 // step3: have an image flash across the screen implying whether or not the problem was answered correctly
 
