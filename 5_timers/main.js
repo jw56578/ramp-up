@@ -8,7 +8,7 @@ var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monste
 // 2nd step: display starting slide(s), ask player for name to keep track of score.
 
 // Below we create a timer feature!
-time = 50;
+time = 500;
 function timer(){
   if(!time<1){
    time = time - 1
@@ -116,8 +116,26 @@ console.log(optionA.innerHTML) // --> Note that just console logging a divs id g
 console.log(pokemonImage.src)
 // Found the GEM below on http://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript 
 console.log( (pokemonImage.src).split('Images/').pop());
+console.log( (pokemonImage.src).split('Images/Pkmn').pop());
+console.log( ((pokemonImage.src).split('Images/Pkmn').pop()).slice(0,-4));
 console.log(pokemonNames[1])
-
+console.log( pokemonNames[((pokemonImage.src).split('Images/').pop()).slice(0,-4)] == optionA.innerHTML || pokemonNames[((pokemonImage.src).split('Images/').pop()).slice(0,-4)] == optionB.innerHTML || pokemonNames[((pokemonImage.src).split('Images/').pop()).slice(0,-4)] == optionC.innerHTML || pokemonNames[((pokemonImage.src).split('Images/').pop()).slice(0,-4)] == optionD.innerHTML)
+console.log(typeof(((pokemonImage.src).split('Images/Pkmn').pop()).slice(0,-4)))
+pkmnString = (((pokemonImage.src).split('Images/Pkmn').pop()).slice(0,-4))
+console.log(pkmnString)
+console.log('----')
+console.log(typeof(pkmnString))
+console.log(typeof(optionA.innerHTML))
+console.log(pkmnString)
+console.log(optionA.innerHTML)
+console.log('........')
+console.log(pokemonNames[parseFloat(pkmnString) -1])
+console.log(pokemonNames[parseFloat(pkmnString) -1] == optionA.innerHTML || pokemonNames[parseFloat(pkmnString) -1] == optionB.innerHTML || pokemonNames[parseFloat(pkmnString) -1] == optionC.innerHTML || pokemonNames[parseFloat(pkmnString) -1] == optionD.innerHTML)
+/*
+$(".option").on("click", function(){
+	if((this.pokemonImage.src).split('Images/').pop()) = pokemonNames[])
+})
+*/
 
 // step3: have an image flash across the screen implying whether or not the problem was answered correctly
 
