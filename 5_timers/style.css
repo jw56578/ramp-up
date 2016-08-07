@@ -24,8 +24,9 @@ h1{
 }
 
 #gameContainer{
-	margin:2em 4em 4em 4em;
+	/* margin:2em 4em 4em 4em; */
 	font-size:1.5em;
+	width:100%;
 }
 
 #result{
@@ -46,7 +47,12 @@ h1{
 	cursor:hand;
 	cursor:pointer;
 }
-#score{
-	height:10%;
-	width:15%;
+#container{
+	display:flex; /* flexbox */
+	/* justify-content:center */
+}
+
+.myGrade{
+	height:2em;
+	width:2em;
 }

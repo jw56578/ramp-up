@@ -152,13 +152,13 @@ $(".option").on("click", function(){
 	  score.innerHTML = "<img src='Images/thatIsCorrect.png'></img>"
 	  setInterval(function(){
 	  	window.location.reload()
-	  },1000);
+	  },500);
 
 	} else{
 	  score.innerHTML = "<img src='Images/thatIsIncorrect.png'></img>"
 	  setInterval(function(){
 	  	window.location.reload()
-	  },1000);
+	  },500);
     }
 })
 
