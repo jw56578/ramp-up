@@ -33,19 +33,19 @@ function randomPokemon(){
 	var pokemonNames = 
 ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Beedrill","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate","Spearow","Fearow","Ekans","Arbok","Pikachu","Raichu","Sandshrew","Sandslash","Nidoran","Nidorina","Nidoqueen","Nidoran","Nidorino","Nidoking","Clefairy","Clefable","Vulpix","Ninetales","Jigglypuff","Wigglypuff","Zubat","Golbat","Oddish","Gloom","Vileplume","Paras","Parasect","Venonat","Venomoth","Diglett","Dugtrio","Meowth","Persian","Psyduck","Golduck","Mankey","Primeape","Growlithe","Arcanine","Poliwag","Poliwhirl","Poliwrath","Abra","Kadabra","Alakazam","Machop","Machoke","Machamp","Bellsprout","Weepinbell","Victreebel","Tentacool","Tentacruel","Geodude","Graveler","Golem","Ponyta","Rapidash","Slowpoke","Slowbro","Magnemite","Magneton","Farfetch'd","Doduo","Dodrio","Seel","Dewgong","Grimer","Muk","Shellder","Cloyster","Gastly","Haunter","Gengar","Onix","Drowzee","Hyno","Krabby","Kingler","Voltorb","ELectrode","Exeggcute","Exeggutor","Cubone","Marowak","Hitmonlee","Hitmonchan","Lickitung","Koffing","Weezing","Rhyhorn","Rhydon","Chansey","Tangela","Kangaskhan","Horsea","Seadra","Goldeen","Seaking","Staryu","Starmie","Mr. Mime","Scyther","Jynx","Electabuzz","Magmar","Pinsir","Tauros","Magikarp","Gyrados","Lapras","Ditto","Eevee","Vaporeon","Jolteon","FLareon","Porygon","Omanyte","Omastar","Kabuto","Kabutops","Aerodactyl","Snorlax","Articuno","Zapdos","Moltres","Dratini","Dragonair","Dragonite","Mewtwo", "Mew"];
 
-	var randomNumBetween0And4 = Math.floor(Math.random() * 3 + 1);
+	var randomNumBetween0And4 = Math.floor(Math.random() * 3 + 0);
 	var correctedForRandomNum = randomNum - 1
 	var randomize = pokemonNames[correctedForRandomNum]; 
 // TODO: Below we must add 3 random but incorrect quiz answers in every place the correct quiz answer is not.
-	// We accomplish this by getting a new random number different from our original randomNum variable. 
+	// step1: We accomplish this by getting a new random number different from our original randomNum variable. 
 	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
-
+// step2: we declare the variables we'll need.
 var newRandomNum1;
 var newRandomNum2;
 var newRandomNum3;
 
+// step3: we create a function that gives each variable a unique number value between 1-151
 function assignNumbersToWrongAnswers(){
-	//var x = undefined, y = undefined, z = undefined;
 
 	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
 	
@@ -53,26 +53,22 @@ function assignNumbersToWrongAnswers(){
 	if(randomWrongNum != randomNum){
 	  newRandomNum1 = randomWrongNum;
 	} 
-	console.log('hola!')
 
 	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
 	if(randomWrongNum != newRandomNum1 && randomWrongNum != randomNum){
 	  newRandomNum2 = randomWrongNum;
 	} 
-	console.log('como')
 	
 	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
 	if(randomWrongNum != newRandomNum1 && randomWrongNum != newRandomNum2 && randomWrongNum != randomNum){
 	  newRandomNum3 = randomWrongNum;
 	} 
-	console.log('esta?')
 
 }
 
-console.log(newRandomNum3)
-
 assignNumbersToWrongAnswers();
 
+// step 4: we write code that places those new pokemon names dynamically into the HTML
 	var wrongAnswerChoice1 = pokemonNames[newRandomNum1];
 	var wrongAnswerChoice2 = pokemonNames[newRandomNum2];
 	var wrongAnswerChoice3 = pokemonNames[newRandomNum3];
