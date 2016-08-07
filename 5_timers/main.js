@@ -101,6 +101,12 @@ randomPokemon();
 // TODO: Show checkmark or wrong mark when answer is correct/incorrect in split second.
 
 // step1: make each option clickable
+$(".option").on("mouseover", function(){
+	this.style.color = "blue";
+});
+$(".option").on("mouseout", function(){
+	this.style.color = "orange";
+});
 // step2: have each button fire a function that checks the guess and save results for later
 // step3: have an image flash across the screen implying whether or not the problem was answered correctly
 

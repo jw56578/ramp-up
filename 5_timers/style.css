@@ -43,4 +43,6 @@ h1{
 	background-color:transparent;
 	border:none;
 	font-size:1em;
+	cursor:hand;
+	cursor:pointer;
 }
