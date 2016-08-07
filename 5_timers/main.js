@@ -32,18 +32,18 @@ function randomPokemon(){
 	// Below we store a random # between 0 and 4 in a variable (this will help in placing the correct name of the pokemon pictured in a random slot)
 	var pokemonNames = 
 ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Beedrill","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate","Spearow","Fearow","Ekans","Arbok","Pikachu","Raichu","Sandshrew","Sandslash","Nidoran","Nidorina","Nidoqueen","Nidoran","Nidorino","Nidoking","Clefairy","Clefable","Vulpix","Ninetales","Jigglypuff","Wigglypuff","Zubat","Golbat","Oddish","Gloom","Vileplume","Paras","Parasect","Venonat","Venomoth","Diglett","Dugtrio","Meowth","Persian","Psyduck","Golduck","Mankey","Primeape","Growlithe","Arcanine","Poliwag","Poliwhirl","Poliwrath","Abra","Kadabra","Alakazam","Machop","Machoke","Machamp","Bellsprout","Weepinbell","Victreebel","Tentacool","Tentacruel","Geodude","Graveler","Golem","Ponyta","Rapidash","Slowpoke","Slowbro","Magnemite","Magneton","Farfetch'd","Doduo","Dodrio","Seel","Dewgong","Grimer","Muk","Shellder","Cloyster","Gastly","Haunter","Gengar","Onix","Drowzee","Hyno","Krabby","Kingler","Voltorb","ELectrode","Exeggcute","Exeggutor","Cubone","Marowak","Hitmonlee","Hitmonchan","Lickitung","Koffing","Weezing","Rhyhorn","Rhydon","Chansey","Tangela","Kangaskhan","Horsea","Seadra","Goldeen","Seaking","Staryu","Starmie","Mr. Mime","Scyther","Jynx","Electabuzz","Magmar","Pinsir","Tauros","Magikarp","Gyrados","Lapras","Ditto","Eevee","Vaporeon","Jolteon","FLareon","Porygon","Omanyte","Omastar","Kabuto","Kabutops","Aerodactyl","Snorlax","Articuno","Zapdos","Moltres","Dratini","Dragonair","Dragonite","Mewtwo", "Mew"];
-	
+
 	var randomNumBetween0And4 = Math.floor(Math.random() * 3 + 1);
-	var randomNumz = randomNum - 1
-	var randomize = pokemonNames[randomNumz];
+	var correctedForRandomNum = randomNum - 1
+	var randomize = pokemonNames[correctedForRandomNum]; 
 	
-	if(randomNumBetween0And4 = 1){
+	if(randomNumBetween0And4 == 1){ // Switching '=' to '==' makes my pokemon names appear in random order.
 		optionA.innerHTML = ""+randomize+"";
-	} else if(randomNumBetween0And4 = 2){
-		optionB.innerHTML = ""+randomize+"";
-	} else if(randomNumBetween0And4 = 3){
-		optionC.innerHTML = ""+randomize+"";
-	} else if(randomNumBetween0And4 = 4){
+	} else if(randomNumBetween0And4 == 2){
+		optionD.innerHTML = ""+randomize+"";
+	} else if(randomNumBetween0And4 == 3){
+		optionD.innerHTML = ""+randomize+"";
+	} else if(randomNumBetween0And4 == 4){
 		optionD.innerHTML = ""+randomize+"";
 	}
 }
