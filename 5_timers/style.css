@@ -40,4 +40,7 @@ h1{
 
 .option{
 	color:orange;
+	background-color:transparent;
+	border:none;
+	font-size:1em;
 }
