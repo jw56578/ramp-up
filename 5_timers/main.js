@@ -51,19 +51,19 @@ function assignNumbersToWrongAnswers(){
 	
 	// My first if statement is working, the rest are NOT!??
 	if(randomWrongNum != randomNum){
-	  newRandomNum3 = randomWrongNum;
+	  newRandomNum1 = randomWrongNum;
 	} 
 	console.log('hola!')
 
 	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
-	if(y = undefined && randomWrongNum != x && randomWrongNum != randomNum){
+	if(randomWrongNum != newRandomNum1 && randomWrongNum != randomNum){
 	  newRandomNum2 = randomWrongNum;
 	} 
 	console.log('como')
 	
 	var randomWrongNum = Math.floor(Math.random() * 152 + 0);
-	if(z = undefined && randomWrongNum != y && randomWrongNum != x && randomWrongNum != randomNum){
-	  newRandomNum1 = randomWrongNum;
+	if(randomWrongNum != newRandomNum1 && randomWrongNum != newRandomNum2 && randomWrongNum != randomNum){
+	  newRandomNum3 = randomWrongNum;
 	} 
 	console.log('esta?')
 
