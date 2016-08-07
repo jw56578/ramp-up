@@ -8,7 +8,7 @@ var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monste
 // 2nd step: display starting slide(s), ask player for name to keep track of score.
 
 // Below we create a timer feature!
-time = 5;
+time = 50;
 function timer(){
   if(!time<1){
    time = time - 1
@@ -107,7 +107,15 @@ $(".option").on("mouseover", function(){
 $(".option").on("mouseout", function(){
 	this.style.color = "orange";
 });
+
 // step2: have each button fire a function that checks the guess and save results for later
+
+console.log(optionA.innerHTML) // --> Note that just console logging a divs id gives you tons of info about it, including what its innerHTML reads as.
+console.log(pokemonImage.src)
+// Found the GEM below on http://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript 
+console.log( (pokemonImage.src).split('Pkmn').pop());
+
+
 // step3: have an image flash across the screen implying whether or not the problem was answered correctly
 
 
