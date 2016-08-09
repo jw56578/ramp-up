@@ -1,3 +1,7 @@
+//var Store = require('store')
+require(['store'], function (foo) {
+    //store is now loaded.
+});
 // Goal of this project: write a pokemon game while learning how to use timer functions!!!
 
 // 1st step: figure out how all pokemon will be stored.
@@ -8,7 +12,7 @@ var pokemon = 'images/Pkmn'+ stringNum + 'png' // We'll avoid storing the monste
 // 2nd step: display starting slide(s), ask player for name to keep track of score.
 
 // Below we create a timer feature!
-time = 500;
+time = 5;
 function timer(){
   if(!time<1){
    time = time - 1
@@ -139,6 +143,14 @@ console.log(pokemonNames[parseFloat(pkmnString) -1] == optionA.innerHTML || poke
 pkmnString = (((pokemonImage.src).split('Images/Pkmn').pop()).slice(0,-4));
 
 var correctAnswerGiven;
+//var userCorrectAnswers = 0;
+//var userWrongAnswers = 0;
+var userCorrectAnswers= parseInt(localStorage.getItem('correctAns')) + 1;
+var userIncorrectAnswers = parseInt(localStorage.getItem('incorrectAns')) + 1;
+var numbers = new Store("numbers")
+numbers.set('correctNum',0)
+numbers.set('incorrectNum',0)
+
 $(".option").on("click", function(){
 	if(pokemonNames[parseFloat(pkmnString) -1] == this.innerHTML){
 		correctAnswerGiven = true;
@@ -148,13 +160,18 @@ $(".option").on("click", function(){
 		//console.log('INCORRECT!')
 	}
 
+// step3: have an image flash across the screen implying whether or not the problem was answered correctly
+
 	if(correctAnswerGiven){
+	  // LocalStorage seems the best way to store our user answer logs, but localStorage only uses strings!
+	  numbers.get('correctNum')++
 	  score.innerHTML = "<img src='Images/thatIsCorrect.png'></img>"
 	  setInterval(function(){
-	  	window.location.reload()
+	 	window.location.reload()
 	  },500);
 
 	} else{
+	  numbers.get('incorrectNum')++
 	  score.innerHTML = "<img src='Images/thatIsIncorrect.png'></img>"
 	  setInterval(function(){
 	  	window.location.reload()
@@ -163,9 +180,7 @@ $(".option").on("click", function(){
 })
 
 
-
-
-// step3: have an image flash across the screen implying whether or not the problem was answered correctly
+console.log("correctAnswers: "+numbers.get('correctNum'))
 
 
 // TODO: Leaf through each question, maximum of 10 questions.
