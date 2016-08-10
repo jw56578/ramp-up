@@ -7,6 +7,9 @@
 	z-index:1;
 }
 
+#padding{
+	height:4em;
+}
 body{
 	display:flex;
 	flex-direction:column;
@@ -36,6 +39,9 @@ body{
 	text-align:center;
 	position:absolute; /* position absolute and z-index help with overlaying */
 	z-index:0;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 
 #mgsQuote{
@@ -47,3 +53,44 @@ body{
 	top: calc(50vh - (/* height */100px / 2)); /* http://stackoverflow.com/questions/4463308/position-absolute-div-in-center-of-screen-view */
     left: calc(50vw - (/* width */140px / 2));
 }
+
+#playButton{
+	height:3em;
+	width:3em;
+	font-family:'helvetica', sans-serif;
+	position:absolute;
+	z-index:2;
+	top: calc(90vh - (/* height */100px / 4)); 
+    left: calc(65vw - (/* width */140px / 2));
+}
+
+#activatedPlayButton{
+	height:3em;
+	width:3em;
+	font-family:'helvetica', sans-serif;
+	position:absolute;
+	z-index:2;
+	top: calc(90vh - (100px / 4)); 
+	left: calc(65vw - (140px / 2));
+}
+
+#secondContainer{
+	color:orange;
+	z-index:2;
+	margin-top:45em;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.newsBoxes{
+	max-width:50%;
+	width:19em;
+	height:19em;
+	background-color:yellow;
+	margin-left:10px;
+}
+#thirdContainer{}
+
+
+
