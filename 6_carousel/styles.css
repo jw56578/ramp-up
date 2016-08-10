@@ -1,0 +1,13 @@
+#topContainer{
+	width:100%;
+	text-align:center;
+}
+
+body{
+	display:flex;
+	flex-direction:column;
+}
+#mgsLogo{
+	height:30%;
+	width:40%;
+}
