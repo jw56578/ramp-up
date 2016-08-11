@@ -90,7 +90,54 @@ body{
 	background-color:yellow;
 	margin-left:10px;
 }
-#thirdContainer{}
+#thirdContainer{
+	padding:2em;
+	text-align:center;
+	height:100%;
+	height:50em;
+}
+#carouselDiv{
+	height:30em;
+	z-index:2;
+	position:absolute;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.carouselBox{
+	max-width:50%;
+	width:19em;
+	height:19em;
+	background-color:green;
+	margin-left:10px;
+}
+#gearPic{
+	width:70%;
+	height:70%;
+	float:right;
+}
+#fourthContainer{
+	background-color:#FDFAEB;
+}
+#fourthContainerDiv{
+	z-index:2;
+	position:absolute;
+	top:128em;
+	font-size:1.0rem;
+	width:60%;
+}
+#headingFourthContainer{
+	font-weight:bold;
+	font-size:100%;
+	width:70%;
+	font-family: 'helvetica', sans-serif;
+}
+#pFourthContainer{
+	width:60%;
+	font-size:100%;
+	font-family: 'helvetica', sans-serif;
+}
+
 
 /* FYI- This page is being modeled after http://tk7.tekken.com */
 
